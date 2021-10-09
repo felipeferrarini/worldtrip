@@ -6,6 +6,26 @@ SwiperCore.use([Navigation, Pagination, A11y]);
 
 const continentes = [
   {
+    name: 'Ásia',
+    info: 'O continente mais antigo',
+    image: 'continentes/asia.jpg',
+  },
+  {
+    name: 'América do Norte',
+    info: 'Lar da maior potência do mundo',
+    image: 'continentes/america_norte.jpg',
+  },
+  {
+    name: 'América do Sul',
+    info: 'O continente mais antigo',
+    image: 'continentes/america_sul.jpg',
+  },
+  {
+    name: 'África',
+    info: 'Safáris e belas paisagens',
+    image: 'continentes/africa.jpg',
+  },
+  {
     name: 'Europa',
     info: 'O continente mais antigo',
     image: 'continentes/europa.jpg',
@@ -14,11 +34,6 @@ const continentes = [
     name: 'Oceania',
     info: 'Exuberante natureza e diversidade cultural',
     image: 'continentes/oceania.jpg',
-  },
-  {
-    name: 'Africa',
-    info: 'Safáris e belas paisagens',
-    image: 'continentes/africa.jpg',
   },
 ];
 
