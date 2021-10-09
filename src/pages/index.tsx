@@ -1,7 +1,5 @@
 import { Divider, Flex, Stack, Text, VStack } from '@chakra-ui/react';
-import { Banner } from './components/Home/Banner';
-import { SliderShow } from './components/Home/SliderShow/SliderShow';
-import { TravelTypes } from './components/Home/TravelTypes';
+import { TravelTypes, SliderShow, Banner } from 'components/Home';
 
 export default function Home(): JSX.Element {
   return (
