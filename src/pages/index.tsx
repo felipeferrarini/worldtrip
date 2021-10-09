@@ -8,7 +8,14 @@ export default function Home(): JSX.Element {
     <Flex direction="column">
       <Banner />
 
-      <Flex w="100%" my="6" maxW={1240} mx="auto" px={['4', '6', '10']} pt="12">
+      <Flex
+        w="100%"
+        mb="6"
+        maxW={1240}
+        mx="auto"
+        px={['0', '6', '10']}
+        pt={['6', '12']}
+      >
         <VStack w="100%" spacing={['6', '12', '16']}>
           <TravelTypes />
           <Divider borderWidth="2" borderColor="gray.600" w="20" />

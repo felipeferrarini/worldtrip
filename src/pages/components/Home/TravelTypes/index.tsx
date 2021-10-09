@@ -1,10 +1,11 @@
 import {
   Icon,
   Image,
-  SimpleGrid,
   Stack,
   Text,
   useBreakpointValue,
+  Wrap,
+  WrapItem,
 } from '@chakra-ui/react';
 import { BsDot } from 'react-icons/bs';
 
@@ -13,7 +14,7 @@ const types = [
   { label: 'praia', image: 'surf' },
   { label: 'moderno', image: 'building' },
   { label: 'clássico', image: 'museum' },
-  { label: 'e mais...', image: 'earth' },
+  { label: 'e mais...', image: 'earth', last: true },
 ];
 
 export const TravelTypes = (): JSX.Element => {
@@ -23,15 +24,14 @@ export const TravelTypes = (): JSX.Element => {
   });
 
   return (
-    <SimpleGrid flex="1" w="100%" columns={isDesktopVersion ? 5 : 2}>
-      {types.map(type => {
-        return (
+    <Wrap flex="1" w={['275px', '100%']} spacing="2" justify="space-between">
+      {types.map(type => (
+        <WrapItem key={type.label} w={type.last && ['100%', 'initial']}>
           <Stack
+            direction={['row', 'column']}
+            justify="center"
             align="center"
-            spacing={['2', '6']}
-            direction={!isDesktopVersion ? 'row' : 'column'}
-            justifyContent="center"
-            key={type.label}
+            w={['100%', 'initial']}
           >
             {isDesktopVersion ? (
               <Image
@@ -41,12 +41,13 @@ export const TravelTypes = (): JSX.Element => {
             ) : (
               <Icon as={BsDot} fontSize="4xl" color="yellow.500" />
             )}
+
             <Text fontWeight="semibold" fontSize={['md', 'lg', '2xl']}>
               {type.label}
             </Text>
           </Stack>
-        );
-      })}
-    </SimpleGrid>
+        </WrapItem>
+      ))}
+    </Wrap>
   );
 };
